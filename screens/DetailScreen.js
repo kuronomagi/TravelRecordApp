@@ -19,5 +19,10 @@ class DetailScreen extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    detailReview: state.review.detailReview
+  };
+};
 
 export default connect(mapStateToProps, actions)(DetailScreen);

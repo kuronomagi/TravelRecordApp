@@ -1,7 +1,7 @@
 import {
   FETCH_ALL_REVIEWS,
   SELECT_DETAIL_REVIEW,
-} from './types';
+} from '../actions/types';
 
 const INITIAL_STATE = { // 初期データ
   allReviews: [], // `allReviews`は最初、空の配列とする
