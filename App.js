@@ -11,6 +11,11 @@ import {
   createBottomTabNavigator,
   createStackNavigator
 } from 'react-navigation';
+import {
+  Provider
+} from 'react-redux';
+
+import store from './store';
 
 import WelcomeScreen from './screens/WelcomeScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -163,10 +168,12 @@ export default class App extends React.Component {
 
     // NavigatorTabを描画
     return (
-      <View style={styles.container}>
-        <StatusBar barStyle="light-content" />
-        <NavigatorTab />
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <StatusBar barStyle="light-content" />
+          <NavigatorTab />
+        </View>
+      </Provider>
     );
   }
 }
